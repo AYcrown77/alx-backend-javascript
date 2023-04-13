@@ -1,10 +1,8 @@
-/* eslint-disable guard-for-in */
-/* eslint-disable no-param-reassign */
 export default function appendToEachArrayValue(array, appendString) {
-  const myarray = [];
+  const myArray = [];
   for (const item of array) {
-    myarray.push(appendString + item);
+    myArray.push(appendString + item);
   }
   
-  return myarray;
+  return myArray;
 }
