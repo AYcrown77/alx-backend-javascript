@@ -1,14 +1,15 @@
 const fs = require('fs');
+
 function countStudents(filepath) {
-  let myData = [];
+  let data = [];
   const fields = {};
   try {
-    myData = fs.readFileSync(filepath).toString().split('\n').slice(1);
+    data = fs.readFileSync(filepath).toString().split('\n').slice(1);
   } catch (err) {
     throw new Error('Cannot load the database');
   }
-  console.log('Number of students: ' + myData.length);
-  myData.map((student) => student.split(','))
+  console.log('Number of students: ' + data.length);
+  data.map((student) => student.split(','))
       .map((student) => {
         if (!(student[3] in fields)) {
           fields[student[3]] = [];
